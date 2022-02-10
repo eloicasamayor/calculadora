@@ -52,7 +52,9 @@ function App() {
   const igual = () => {
     console.log("calculant..." + operacio);
 
-    operacio === "+" ? setValor1(valor1 + valor2) : setValor1(valor1 - valor2);
+    operacio === "+"
+      ? setValor1((n) => n + valor2)
+      : setValor1((n) => n - valor2);
     setValor2(0);
     setOperacio(null);
   };
