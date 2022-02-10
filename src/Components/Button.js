@@ -1,3 +1,7 @@
-export default function Button({ valor, funcio }) {
-  return <button onClick={() => funcio(valor)}>{valor}</button>;
+export default function Button({ classe, valor, funcio }) {
+  return (
+    <button className={"btn-" + classe} onClick={() => funcio(valor)}>
+      {valor}
+    </button>
+  );
 }
